@@ -1,0 +1,528 @@
+/*
+Theme Name: rthor-v1
+Theme URI: http://github.com/rthor/wp-rthor
+Description: A basic WordPress theme for my website - www.rthor.is
+Version: 1.0
+Author: Ragnar Þór Valgeirsson
+Author URI: http://rthor.is/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("./fonts/icomoon.eot");
+  src: url("./fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("./fonts/icomoon.woff") format("woff"), url("./fonts/icomoon.ttf") format("truetype"), url("./fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icomoon, .icon-facebook, .icon-twitter, .icon-mail, .icon-github, .icon-quill, .icon-home, .icon-stats {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-facebook:before {
+  content: "\66";
+}
+
+.icon-twitter:before {
+  content: "\74";
+}
+
+.icon-mail:before {
+  content: "\6d";
+}
+
+.icon-github:before {
+  content: "\67";
+}
+
+.icon-quill:before {
+  content: "\70";
+}
+
+.icon-home:before {
+  content: "\68";
+}
+
+.icon-stats:before {
+  content: "\61";
+}
+
+a {
+  color: #cc6600;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+a.more-link {
+  font-weight: 900;
+  font-family: "ff-meta-serif-web-pro", serif;
+}
+a:hover {
+  color: #b35900;
+}
+
+em, i {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+p.meta {
+  font-size: 14px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-size: 18px;
+  padding: 0 5%;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+h2, h2 a,
+h3, h3 a {
+  font-size: 24px;
+  margin: 40px 0 20px;
+}
+
+h4, h4 a {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+input, textarea, button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  margin: 0;
+  font-size: 14px;
+  padding: 5px 8px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  color: #cc6600;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: #cc6600;
+  border: none;
+  color: #fff;
+  font-family: "ff-meta-serif-web-pro", serif;
+  font-size: 16px;
+  cursor: pointer;
+  height: 30px;
+}
+input[type="submit"]:hover {
+  background: #b35900;
+}
+
+body {
+  background: url("./img/ecailles.png");
+  color: #5b5b5b;
+  font-size: 14px;
+  font-family: "ff-meta-serif-web-pro", serif;
+  line-height: 24px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  body {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("./img/ecailles_@2X.png");
+    background-size: 24px 10px;
+  }
+}
+@media (min-width: 650px) {
+  body {
+    padding-top: 35px;
+  }
+}
+
+.container {
+  *zoom: 1;
+  max-width: 660px;
+  _width: 660px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 660px) {
+  .container {
+    max-width: 660px;
+  }
+}
+@media (min-width: 980px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+.nav .actions {
+  display: none;
+}
+
+.nav a {
+  display: block;
+  background: #cc6600;
+  color: #fff;
+  padding: 5px 8px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border-bottom: 1px solid #b35900;
+}
+.nav a:hover {
+  color: #fff;
+  background: #b35900;
+}
+
+@media (min-width: 650px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+    z-index: 1000;
+    -webkit-box-shadow: 0 -8px 28px #ebebeb;
+    -moz-box-shadow: 0 -8px 28px #ebebeb;
+    box-shadow: 0 -8px 28px #ebebeb;
+  }
+  .nav a {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    background-color: transparent;
+    border-bottom: none;
+    color: #cc6600;
+  }
+  .nav a:hover {
+    color: #333;
+    background: transparent;
+  }
+  .nav .current-menu-item a {
+    background: #cc6600;
+    color: #fff;
+  }
+  .nav input[type="text"] {
+    font-size: 12px;
+    background: #f7f7f7;
+    width: 200px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .nav input[type="text"]:focus {
+    background: #fff;
+  }
+  .nav input {
+    height: 34px;
+    float: left;
+    border-color: transparent;
+    border-left-color: #ebebeb;
+  }
+  .nav input[type="submit"] {
+    background: #bbb;
+    display: inline-block;
+    float: left;
+  }
+  .nav input[type="submit"]:hover, .nav input[type="submit"]:focus {
+    background: #cc6600;
+  }
+  .nav input[type="submit"]:active {
+    background: #b35900;
+  }
+  .nav .social {
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .nav .social a {
+    float: left;
+    padding: 0;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #bbb;
+  }
+  .nav .social a.github:hover {
+    color: #a83f3a;
+  }
+  .nav .social a.twitter:hover {
+    color: #23a1e1;
+  }
+  .nav .actions {
+    display: inline-block;
+    float: right;
+  }
+  .nav .actions form {
+    display: inline-block;
+  }
+}
+header[role="banner"] {
+  margin: 50px 0 50px;
+  text-align: center;
+}
+header[role="banner"] img {
+  width: 124px;
+  margin: 0 auto;
+  border-radius: 50% 50%;
+  -webkit-box-shadow: #dedede 0 0 3px 3px;
+  -moz-box-shadow: #dedede 0 0 3px 3px;
+  box-shadow: #dedede 0 0 3px 3px;
+}
+header[role="banner"] h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+header[role="banner"] h1 small {
+  text-transform: none;
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+header[role="banner"] p.description {
+  margin-top: 5px;
+  font-family: "ff-meta-serif-web-pro", serif;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+.main header h2, .main header h2 a {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 20px 0;
+  color: #5b5b5b;
+  text-transform: uppercase;
+}
+.main header h2 em, .main header h2 a em {
+  font-weight: 200;
+  font-style: italic;
+}
+.main header h2 a:hover {
+  color: #b35900;
+}
+@media (min-width: 650px) {
+  .main {
+    width: 74.19355%;
+    float: left;
+    margin-right: 3.22581%;
+    display: inline;
+  }
+  .main header h2, .main header h2 a {
+    font-size: 45px;
+    line-height: 48px;
+  }
+}
+
+.main.big {
+  float: none;
+  width: auto;
+  margin-right: auto;
+  *margin-left: auto;
+  display: block;
+}
+.main.big .post {
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.post {
+  background: #fff;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: whitesmoke 0 0 4px;
+  -moz-box-shadow: whitesmoke 0 0 4px;
+  box-shadow: whitesmoke 0 0 4px;
+}
+.post ul {
+  list-style-type: circle;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.post ul li {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.post .addthis_toolbox {
+  margin: 5% 0;
+}
+
+.archive {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #efefef;
+}
+.archive h3, .archive h3 a {
+  margin: 0;
+}
+.archive:last-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.sidebar h2 {
+  font-weight: 900;
+  margin-top: 0;
+}
+.sidebar section {
+  margin-bottom: 50px;
+}
+.sidebar li {
+  margin-bottom: 5px;
+}
+.sidebar li a {
+  font-weight: 100;
+  color: #333;
+}
+.sidebar li a em {
+  font-style: italic;
+}
+.sidebar li a:hover {
+  color: #b35900;
+}
+@media (min-width: 650px) {
+  .sidebar {
+    width: 22.58065%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -20px;
+    display: inline;
+  }
+}

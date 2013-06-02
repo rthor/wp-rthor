@@ -1,0 +1,1 @@
+Just a simple WordPress theme for my personal website - [www.rthor.is](http://rthor.is).

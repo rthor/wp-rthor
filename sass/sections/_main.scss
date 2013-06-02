@@ -1,0 +1,41 @@
+.main {
+	margin-bottom: 20px;
+
+	header {
+		h2, h2 a {
+			font-weight: 900;
+			font-size: 32px;
+			line-height: 38px;
+			margin: 20px 0;
+			color: $grayDark;
+			text-transform: uppercase;
+
+			em {
+				font-weight: 200;
+				font-style: italic;
+			}
+		}
+
+		h2 a:hover {
+			color: $linkColorHover;
+		}
+	}
+
+	@include bp(robin) {
+		header h2, header h2 a {
+			font-size: 45px;
+			line-height: 48px;
+		}
+
+		@include span_columns(6, 8);
+	}
+}
+
+.main.big {
+	.post {
+		margin: 0 auto;
+		padding: 10%;
+	}
+
+	@include reset-columns;
+}

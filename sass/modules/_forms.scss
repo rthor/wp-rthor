@@ -1,0 +1,39 @@
+input, textarea, button {
+	-webkit-appearance: none;
+	@include border-radius(0);
+	@include box-sizing(border-box);
+}
+
+input, textarea {
+	background: #fff;
+	border: 1px solid #ebebeb;
+	margin: 0;
+	font-size: 14px;
+	padding: 5px 8px;
+	@include transition(.2s);
+
+	&:focus {
+		outline: 0;
+		color: $linkColor;
+	}
+}
+
+textarea {
+	width: 100%;
+}
+
+input[type="submit"] {
+	background: $linkColor;
+	border: none;
+	color: #fff;
+
+	font-family: $serif;
+	font-size: 16px;
+
+	cursor: pointer;
+	height: 30px;
+
+	&:hover {
+		background: $linkColorHover;
+	}
+}

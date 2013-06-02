@@ -1,0 +1,16 @@
+body {
+	background: url('./img/ecailles.png');
+
+	color: #5b5b5b;
+	font-size: 14px;
+	font-family: $serif;
+	line-height: 24px;
+
+	@include image-2x('./img/ecailles_@2X.png', 24px, 10px);
+	@include bp(robin) { padding-top: 35px; }
+}
+
+.container {
+	@include container($total-columns, 8, 12);
+	@include transition(.4s ease);
+}

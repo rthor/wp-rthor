@@ -1,0 +1,26 @@
+.sidebar {
+	h2 {
+		font-weight: 900;
+		margin-top: 0;
+	}
+
+	section {
+		margin-bottom: 50px;
+	}
+
+	li {
+		margin-bottom: 5px;
+	}
+
+	li a {
+		font-weight: 100;
+		color: #333;
+
+		em { font-style: italic; }
+		&:hover { color: $linkColorHover; }
+	}
+
+	@include bp(robin) {
+		@include span_columns(2 omega, 8);
+	}
+}

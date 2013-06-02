@@ -1,0 +1,35 @@
+/*
+Theme Name: rthor-v1
+Theme URI: http://github.com/rthor/wp-rthor
+Description: A basic WordPress theme for my website - www.rthor.is
+Version: 1.0
+Author: Ragnar Þór Valgeirsson
+Author URI: http://rthor.is/
+*/
+
+// Vendor Dependencies
+// ========================================================================
+@import "compass";
+@import "compass/reset";
+
+// Authored Dependencies
+// ========================================================================
+@import "global/variables";
+@import "global/susy-base";
+@import "global/fonts";
+@import "global/mixins";
+
+// Modules
+// ========================================================================
+@import "modules/typography";
+@import "modules/forms";
+
+// Sections
+// ========================================================================
+@import "sections/structure";
+@import "sections/navigation";
+@import "sections/header";
+@import "sections/main";
+@import "sections/posts";
+@import "sections/archive";
+@import "sections/sidebar";

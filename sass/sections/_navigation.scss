@@ -1,0 +1,110 @@
+.nav .actions {
+	display: none;
+}
+
+.nav a {
+	display: block;
+
+	background: $linkColor;
+	color: #fff;
+	padding: 5px 8px;
+	font-family: $sans;
+
+	border-bottom: 1px solid $linkColorHover;
+
+	&:hover {
+		color: #fff;
+		background: $linkColorHover;
+	}
+}
+
+@include bp(robin) {
+	.nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		height: 35px;
+		line-height: 35px;
+
+		background: #fff;
+		border-bottom: 1px solid #ededed;
+
+		z-index: 1000;
+
+		@include box-shadow(0 -8px 28px #ebebeb);
+
+		a {
+			display: inline-block;
+			float: left;
+			padding: 0 10px;
+			background-color: transparent;
+			border-bottom: none;
+			color: $linkColor;
+
+			&:hover {
+				color: #333;
+				background: transparent;
+			}
+		}
+
+		.current-menu-item {
+			a {
+				background: $linkColor;
+				color: #fff;
+			}
+		}
+
+		input[type="text"] {
+			font-size: 12px;
+			background: #f7f7f7;
+			width: 200px;
+			@include transition(.4s);
+		}
+
+		input[type="text"]:focus {
+			background: #fff;
+		}
+
+		input {
+			height:  34px;
+			float: left;
+			border-color: transparent;
+			border-left-color: #ebebeb;
+		}
+
+		input[type="submit"] {
+			background: #bbb;
+			display: inline-block;
+			float: left;
+
+			&:hover, &:focus { background: $linkColor; }
+			&:active { background: $linkColorHover; }
+		}
+
+		.social {
+			float: left;
+			display: inline-block;
+			margin-right: 5px;
+
+			a {
+				float: left;
+				padding: 0;
+				margin-right: 5px;
+				font-size: 18px;
+				color: #bbb;
+
+				&.github:hover { color: #a83f3a; }
+				&.twitter:hover { color: #23a1e1; }
+			}
+		}
+
+		.actions {
+			display: inline-block;
+			float: right;
+
+			form { display: inline-block; }
+		}
+	}
+}

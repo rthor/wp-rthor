@@ -1,0 +1,53 @@
+a {
+	color: $linkColor;
+	text-decoration: none;
+
+	@include transition(.2s);
+
+	&.more-link {
+		font-weight: 900;
+		font-family: $serif;
+	}
+
+	&:hover {
+		color: $linkColorHover;
+	}
+}
+
+em, i {	font-style: italic; }
+
+b, strong { font-weight: 600; }
+
+p {
+	margin-bottom: 20px;
+	font-family: $sans;
+	font-weight: 300;
+
+	font-size: 16px;
+
+	&.meta {
+		font-size: 14px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+blockquote {
+	font-size: 18px;
+	padding: 0 5%;
+	color: #999;
+	margin-bottom: 20px;
+}
+
+h2, h2 a,
+h3, h3 a {
+	font-size: 24px;
+	margin: 40px 0 20px;
+}
+
+h4, h4 a {
+	font-size: 16px;
+	font-weight: 900;
+}
